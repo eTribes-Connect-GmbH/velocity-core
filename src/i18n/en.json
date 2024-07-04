@@ -1,0 +1,53 @@
+{
+  "generic": {
+    "view": "View",
+    "remove": "Remove",
+    "submit": "Submit"
+  },
+  "account": {
+    "greeting": "Hi <b>{firstName}</b>! ",
+    "account": "Account",
+    "logIn": "Log in",
+    "createAccount": "Create account",
+    "notYou": "Not you?",
+    "logOut": "Log out",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "company": "Company",
+    "email": "Email Address",
+    "phone": "Phone Number"
+  },
+  "start": {
+    "welcome": "Welcome",
+    "welcomeText": "Welcome to <b>Velocity</b>, the technology stack of the future!",
+    "authText": {
+      "loggedOut": "To get started, <registerLink>create an account</registerLink> or <loginLink>log in with an existing account</loginLink>.",
+      "loggedIn": "If it's not you, <logoutLink>log out</logoutLink> to switch to another account."
+    },
+    "tryFormDemo": "Try the <formPageLink>form demo</formPageLink>!"
+  },
+  "address": {
+    "shipping": "Shipping Address",
+    "billing": "Billing Address",
+    "streetAddress": "Street Address",
+    "supplement": "Address Supplement",
+    "postalCode": "Postal Code",
+    "city": "City"
+  },
+  "message": {
+    "writeAMessage": "Write a Message!",
+    "message": "Message"
+  },
+  "notFound": {
+    "notFound": "Not Found",
+    "notFoundText1": "Page not found...",
+    "notFoundText2": "Unfortunately, the page you are looking for could not be found.",
+    "tryAgainLater": "Please try again later or go <startLink>back to the Start Page</startLink>."
+  },
+  "error": {
+    "error": "Error",
+    "errorText1": "Something went wrong...",
+    "errorText2": "Unfortunately, an unexpected technical issue has occured. We apologize for the inconvenience.",
+    "tryAgainLater": "Please try again later or try going back <startLink>back to the Start Page</startLink>."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "generic": {
+    "view": "Ansehen",
+    "remove": "Entfernen",
+    "submit": "Absenden"
+  },
+  "account": {
+    "greeting": "Hallo <b>{firstName}</b>! ",
+    "account": "Benutzerkonto",
+    "logIn": "Anmelden",
+    "createAccount": "Benutzerkonto erstellen",
+    "notYou": "Nicht Sie?",
+    "logOut": "Abmelden",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "company": "Firma",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer"
+  },
+  "start": {
+    "welcome": "Willkommen",
+    "welcomeText": "Willkommen bei <b>Velocity</b>, dem Technologie-Stack der Zukunft!",
+    "authText": {
+      "loggedOut": "<registerLink>Erstellen Sie ein Benutzerkonto</registerLink> oder <loginLink>melden Sie sich mit einem bestehenden Benutzerkonto an</loginLink>, um loszulegen.",
+      "loggedIn": "Wenn das nicht Sie sind, <logoutLink>melden Sie sich ab</logoutLink>, um das Konto zu wechseln."
+    },
+    "tryFormDemo": "Teste das <formPageLink>Demo-Formular</formPageLink>!"
+  },
+  "address": {
+    "shipping": "Lieferadresse",
+    "billing": "Rechnungsadresse",
+    "streetAddress": "Straße und Hausnummer",
+    "supplement": "Addresszusatz",
+    "postalCode": "PLZ",
+    "city": "Stadt"
+  },
+  "message": {
+    "writeAMessage": "Schreiben Sie eine Nachricht!",
+    "message": "Nachricht"
+  },
+  "notFound": {
+    "notFound": "Nicht gefunden",
+    "notFoundText1": "Seite nicht gefunden...",
+    "notFoundText2": "Leider konnte die von Ihnen angeforderte Seite nicht gefunden werden.",
+    "tryAgainLater": "Bitte versuchen Sie es später erneut oder gehen Sie <startLink>zurück zur Startseite</startLink>."
+  },
+  "error": {
+    "error": "Fehler",
+    "errorText1": "Etwas ist schiefgelaufen...",
+    "errorText2": "Leider ist ein unerwartetes technisches Problem aufgetreten. Wir entschuldigen uns für die Unannehmlichkeiten.",
+    "tryAgainLater": "Bitte versuchen Sie es später erneut oder gehen Sie <startLink>zurück zur Startseite</startLink>."
+  }
+}

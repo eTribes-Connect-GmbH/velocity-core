@@ -1,0 +1,11 @@
+node_modules/
+.build/
+.env
+fly.toml
+
+.notes/
+.idea/
+
+.DS_Store
+Thumbs.db
+desktop.ini
