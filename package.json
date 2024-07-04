@@ -22,21 +22,21 @@
     "@formatjs/intl": "2.10.4",
     "@hotwired/turbo": "8.0.4",
     "@nanoweb/jsx": "0.0.19",
-    "fastify": "4.27.0",
+    "fastify": "4.28.1",
     "flat": "6.0.1",
-    "get-jwks": "9.0.1"
+    "get-jwks": "9.0.2"
   },
   "devDependencies": {
-    "@types/node": "20.14.2",
-    "@typescript-eslint/eslint-plugin": "7.12.0",
-    "@typescript-eslint/parser": "7.12.0",
-    "esbuild": "0.21.4",
+    "@types/node": "20.14.9",
+    "@typescript-eslint/eslint-plugin": "7.15.0",
+    "@typescript-eslint/parser": "7.15.0",
+    "esbuild": "0.23.0",
     "eslint": "8.57.0",
-    "eslint-plugin-promise": "6.2.0",
-    "pino-pretty": "11.1.0",
-    "prettier": "3.3.1",
-    "prettier-plugin-tailwindcss": "0.6.1",
+    "eslint-plugin-promise": "6.4.0",
+    "pino-pretty": "11.2.1",
+    "prettier": "3.3.2",
+    "prettier-plugin-tailwindcss": "0.6.5",
     "tailwindcss": "3.4.4",
-    "typescript": "5.4.5"
+    "typescript": "5.5.3"
   }
 }
