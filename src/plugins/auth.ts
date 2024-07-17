@@ -22,7 +22,7 @@ const formatUser = (payload: any): User => {
     email: payload.email,
     firstName: payload.given_name ?? payload.user_metadata?.firstname ?? namesFromEmail?.firstName ?? payload.email,
     lastName: payload.family_name ?? payload.user_metadata?.lastname ?? namesFromEmail?.lastName,
-    optIn: payload.user_metadata.optin,
+    optIn: payload.user_metadata?.optin,
     emailVerified: payload.email_verified
   };
 };
@@ -39,6 +39,7 @@ const auth: FastifyPluginAsync = fp(async localePrefixedRouter => {
         client_id: config.auth.clientId,
         scope: config.auth.scopes.join(' '),
         redirect_uri: `${config.baseUrl}${addLocalePrefix('/auth/callback')}`,
+        prompt: 'login',
         ui_locales: locale,
         ...(request.params.type === 'register' && { screen_hint: 'signup' })
       };
