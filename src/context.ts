@@ -3,7 +3,7 @@ import fp from 'fastify-plugin';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { User } from './plugins/auth';
 
-export const asyncLocalStorage = new AsyncLocalStorage();
+const asyncLocalStorage = new AsyncLocalStorage();
 
 type Context<T extends RouteGenericInterface> = {
   request: FastifyRequest<T>;
