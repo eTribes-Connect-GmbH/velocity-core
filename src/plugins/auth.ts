@@ -27,7 +27,7 @@ const formatUser = (payload: any): User => {
   };
 };
 
-const jwksGetter = createJwksGetter();
+const jwksGetter = createJwksGetter({ issuersWhitelist: [config.auth.baseUrl] });
 
 const auth: FastifyPluginAsync = fp(async localePrefixedRouter => {
   localePrefixedRouter.get<{ Params: { type: 'login' | 'register' } }>(
@@ -86,7 +86,6 @@ const auth: FastifyPluginAsync = fp(async localePrefixedRouter => {
     cookie: { cookieName: 'token', signed: false },
     decode: { complete: true },
     secret: (_request: unknown, { header, payload }: any) =>
-      // need to double check if unsafe (manipulated iss pointing to attacker-controlled domain and therefore key)
       jwksGetter.getPublicKey({ kid: header.kid, domain: payload.iss, alg: header.alg }),
     formatUser
   });
@@ -95,7 +94,8 @@ const auth: FastifyPluginAsync = fp(async localePrefixedRouter => {
       return;
     }
     try {
-      await request.jwtVerify(); // throws for missing or invalid token and populates request.user with jwt payload
+      // populates request.user with jwt payload or throws for missing or invalid token
+      await request.jwtVerify();
     } catch {
       if (request.cookies.token) {
         // clean up old or corrupted token

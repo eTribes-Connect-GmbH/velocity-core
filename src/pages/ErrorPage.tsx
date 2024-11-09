@@ -1,8 +1,8 @@
 import Layout from '~/components/Layout';
-import getI18n from '~/i18n';
+import useI18n from '~/i18n';
 
 const ErrorPage = () => {
-  const { addLocalePrefix, t } = getI18n();
+  const { addLocalePrefix, t } = useI18n();
   return (
     <Layout title={t('error.error')}>
       <h1 class="mb-2 text-2xl font-bold">{t('error.errorText1')}</h1>

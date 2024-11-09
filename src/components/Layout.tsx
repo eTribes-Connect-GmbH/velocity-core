@@ -31,8 +31,8 @@ const Layout = async ({ title, customLocaleAlternates, additionalScripts, childr
         {Object.entries(localeAlternates).map(([eachLocale, eachUrl]) => (
           <link rel="alternate" hrefLang={eachLocale} href={eachUrl} />
         ))}
-        <script async type="module" src={client}></script>
-        {additionalScripts?.map(script => <script async src={script}></script>)}
+        <script async type="module" src={client} />
+        {additionalScripts?.map(script => <script async src={script} />)}
       </head>
       <body class="min-h-screen bg-gradient-to-br from-white to-blue-200">
         <div class="m-auto max-w-screen-lg p-6 sm:p-10">

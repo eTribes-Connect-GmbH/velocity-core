@@ -63,7 +63,7 @@ const createI18n = (locale: Locale): I18n => {
           Object.fromEntries(
             Object.entries(values).map(([key, value]) => [
               key,
-              typeof value === 'function' ? (getRichTextElementRenderer(value) as any) : value
+              typeof value === 'function' ? getRichTextElementRenderer(value) : value
             ])
           )
       ),
