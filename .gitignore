@@ -2,9 +2,9 @@ node_modules/
 .build/
 .env
 
-.notes/
 .vscode/
 .idea/
+.notes/
 
 .DS_Store
 Thumbs.db

@@ -1,10 +1,10 @@
 node_modules/
 .build/
 .env
-fly.toml
 
-.notes/
+.vscode/
 .idea/
+.notes/
 
 .DS_Store
 Thumbs.db
