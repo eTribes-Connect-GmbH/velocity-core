@@ -7,11 +7,11 @@
     "build": "NODE_ENV=production node build.js",
     "check-formatting": "prettier --check './src/**/*.ts{,x}'",
     "check-typing": "tsc --noEmit",
-    "dev": "NODE_ENV=development node --env-file=.env build.js | pino-pretty",
+    "dev": "NODE_ENV=development node --env-file-if-exists=.env build.js | pino-pretty",
     "fix-formatting": "prettier --write './src/**/*.ts{,x}'",
     "fix-lint": "eslint --fix './src/**/*.ts{,x}'",
     "lint": "eslint './src/**/*.ts{,x}'",
-    "start": "NODE_ENV=production node --env-file=.env --enable-source-maps ./.build/production/index.js"
+    "start": "NODE_ENV=production node --env-file-if-exists=.env --enable-source-maps ./.build/production/index.js"
   },
   "dependencies": {
     "@fastify/basic-auth": "6.0.3",
@@ -34,7 +34,6 @@
     "esbuild": "0.24.2",
     "eslint": "9.18.0",
     "eslint-plugin-promise": "7.2.1",
-    "globals": "15.14.0",
     "pino-pretty": "13.0.0",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.6.10",
