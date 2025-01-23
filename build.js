@@ -96,9 +96,8 @@ const waitForFile = async filePath => {
   }
 };
 
-// We want to avoid bundling an outdated tailwind build, so we're rebuilding it
 if (isProduction) {
-  rmSync('src/assets/style.css', { recursive: true, force: true });
+  rmSync(buildDir, { recursive: true, force: true });
 }
 
 const tailwindPath = `${buildDir}/assets/style.css`;
@@ -107,10 +106,6 @@ runService(
   `${isDevelopment ? '-w' : '-m'} -i ./src/assets/style.css -o ${tailwindPath}`,
   'ignore'
 );
-
-if (isProduction) {
-  rmSync(buildDir, { recursive: true, force: true });
-}
 
 await waitForFile(tailwindPath);
 
