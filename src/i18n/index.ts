@@ -4,7 +4,7 @@ import { flatten } from 'flat';
 import { useRequest } from '~/context';
 import * as de from './de.json';
 import * as en from './en.json';
-import { defaultRichTextElements, getRichTextElementRenderer } from './richTextElements';
+import { defaultRichTextElements, getRichTextElementRenderer } from './richTextElements.js';
 
 export const availableLocales = ['en', 'de'] as const;
 

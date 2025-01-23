@@ -1,7 +1,7 @@
 import { FastifyPluginAsync, FastifyReply, FastifyRequest, RouteGenericInterface } from 'fastify';
 import fp from 'fastify-plugin';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { User } from './plugins/auth';
+import { User } from './plugins/auth.js';
 
 const asyncLocalStorage = new AsyncLocalStorage();
 

@@ -3,15 +3,15 @@ import fastifyFormBody from '@fastify/formbody';
 import fastifyStatic from '@fastify/static';
 import fastify, { FastifyPluginAsync } from 'fastify';
 import { join } from 'node:path';
-import config from './config';
-import { contextCreator } from './context';
-import { availableLocales, getRequestedLocale } from './i18n';
-import auth from './plugins/auth';
-import basicAuth from './plugins/basicAuth';
-import errors from './plugins/errors';
-import liveReload from './plugins/liveReload';
-import pages from './plugins/pages';
-import renderer from './plugins/renderer';
+import config from './config.js';
+import { contextCreator } from './context.js';
+import { availableLocales, getRequestedLocale } from './i18n.js';
+import auth from './plugins/auth.js';
+import basicAuth from './plugins/basicAuth.js';
+import errors from './plugins/errors.js';
+import liveReload from './plugins/liveReload.js';
+import pages from './plugins/pages.js';
+import renderer from './plugins/renderer.js';
 
 const server = fastify({ logger: { level: config.logLevel } });
 

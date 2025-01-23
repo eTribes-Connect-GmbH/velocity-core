@@ -1,7 +1,6 @@
 import '@hotwired/turbo';
-import 'bundle:tailwind.css';
-import './base.css';
-import initLiveReload from './utilities/liveReload';
+import 'bundle:style.css';
+import initLiveReload from './utilities/liveReload.js';
 
 if (process.env.NODE_ENV === 'development') {
   initLiveReload();

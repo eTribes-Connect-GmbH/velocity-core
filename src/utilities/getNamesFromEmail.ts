@@ -1,4 +1,4 @@
-import capitalizeFirstLetter from './capitalizeFirstLetter';
+import capitalizeFirstLetter from './capitalizeFirstLetter.js';
 
 const getNamesFromEmail = (email: string) => {
   const groups = /^(?<firstName>\p{L}+)\.(?<lastName>\p{L}+)@/u.exec(email)?.groups;

@@ -4,8 +4,8 @@ import favicon from '~/assets/favicon.ico';
 import logo from '~/assets/logo.svg';
 import { useRequest } from '~/context';
 import useI18n, { LocaleAlternates, getLocaleAlternates } from '~/i18n';
-import AccountFlyout from './AccountFlyout';
-import LocaleSelectorFlyout from './LocaleSelectorFlyout';
+import AccountFlyout from './AccountFlyout.js';
+import LocaleSelectorFlyout from './LocaleSelectorFlyout.js';
 
 type LayoutProps = {
   title?: string;
