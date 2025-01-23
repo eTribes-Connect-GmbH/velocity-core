@@ -1,4 +1,4 @@
-import { useReply } from '~/context';
+import { useReply } from '~/context.js';
 
 const NotFound = () => {
   useReply().callNotFound();

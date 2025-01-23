@@ -1,6 +1,6 @@
 import userIcon from '~/assets/icons/user.svg';
-import { useUser } from '~/context';
-import useI18n from '~/i18n';
+import { useUser } from '~/context.js';
+import useI18n from '~/i18n/index.js';
 
 const AccountFlyout = async () => {
   const { addLocalePrefix, t } = useI18n();
@@ -11,7 +11,7 @@ const AccountFlyout = async () => {
         <img src={userIcon} alt={t('account.account')} class="size-6" />
       </div>
       <div
-        class="absolute -right-9 top-10 z-10 hidden min-w-60 rounded-lg bg-white p-3 shadow-lg group-hover:block"
+        class="absolute top-10 -right-9 z-10 hidden min-w-60 rounded-lg bg-white p-3 shadow-lg group-hover:block"
         data-testid="account-flyout"
       >
         {user ? (

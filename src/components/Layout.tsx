@@ -2,8 +2,8 @@ import styles from 'bundle:client.entry.css';
 import client from 'bundle:client.entry.js';
 import favicon from '~/assets/favicon.ico';
 import logo from '~/assets/logo.svg';
-import { useRequest } from '~/context';
-import useI18n, { LocaleAlternates, getLocaleAlternates } from '~/i18n';
+import { useRequest } from '~/context.js';
+import useI18n, { LocaleAlternates, getLocaleAlternates } from '~/i18n/index.js';
 import AccountFlyout from './AccountFlyout.js';
 import LocaleSelectorFlyout from './LocaleSelectorFlyout.js';
 
@@ -34,8 +34,8 @@ const Layout = async ({ title, customLocaleAlternates, additionalScripts, childr
         <script async type="module" src={client} />
         {additionalScripts?.map(script => <script async src={script} />)}
       </head>
-      <body class="min-h-screen bg-gradient-to-br from-white to-blue-200">
-        <div class="m-auto max-w-screen-lg p-6 sm:p-10">
+      <body class="min-h-screen bg-linear-to-br from-white to-blue-200">
+        <div class="m-auto max-w-(--breakpoint-lg) p-6 sm:p-10">
           <header class="mb-6 flex items-center justify-between">
             <a href={addLocalePrefix('/')} class="flex items-center gap-6">
               <img src={logo} alt="Velocity" class="w-36" />

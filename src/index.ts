@@ -5,7 +5,7 @@ import fastify, { FastifyPluginAsync } from 'fastify';
 import { join } from 'node:path';
 import config from './config.js';
 import { contextCreator } from './context.js';
-import { availableLocales, getRequestedLocale } from './i18n.js';
+import { availableLocales, getRequestedLocale } from './i18n/index.js';
 import auth from './plugins/auth.js';
 import basicAuth from './plugins/basicAuth.js';
 import errors from './plugins/errors.js';

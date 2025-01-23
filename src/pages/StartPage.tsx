@@ -1,6 +1,6 @@
-import Layout from '~/components/Layout';
-import { useUser } from '~/context';
-import useI18n from '~/i18n';
+import Layout from '~/components/Layout.js';
+import { useUser } from '~/context.js';
+import useI18n from '~/i18n/index.js';
 
 const StartPage = async () => {
   const { addLocalePrefix, t } = useI18n();

@@ -2,9 +2,9 @@ import fastifyJwt from '@fastify/jwt';
 import { FastifyPluginAsync } from 'fastify';
 import fp from 'fastify-plugin';
 import createJwksGetter from 'get-jwks';
-import config from '~/config';
-import useI18n from '~/i18n';
-import getNamesFromEmail from '~/utilities/getNamesFromEmail';
+import config from '~/config.js';
+import useI18n from '~/i18n/index.js';
+import getNamesFromEmail from '~/utilities/getNamesFromEmail.js';
 
 export type User = {
   id: string;
