@@ -1,4 +1,4 @@
-import TextArea, { TextAreaProps } from './TextArea';
+import TextArea, { TextAreaProps } from './TextArea.js';
 
 const LabeledTextArea = ({ name, label, ...rest }: TextAreaProps) => (
   <div>

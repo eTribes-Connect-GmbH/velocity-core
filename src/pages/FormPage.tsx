@@ -1,9 +1,9 @@
-import Button from '~/components/Button';
-import LabeledInput from '~/components/LabeledInput';
-import LabeledTextArea from '~/components/LabeledTextArea';
-import Layout from '~/components/Layout';
-import { useUser } from '~/context';
-import useI18n from '~/i18n';
+import Button from '~/components/Button.js';
+import LabeledInput from '~/components/LabeledInput.js';
+import LabeledTextArea from '~/components/LabeledTextArea.js';
+import Layout from '~/components/Layout.js';
+import { useUser } from '~/context.js';
+import useI18n from '~/i18n/index.js';
 
 const FormPage = async () => {
   const { t } = useI18n();

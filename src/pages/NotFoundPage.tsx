@@ -1,5 +1,5 @@
-import Layout from '~/components/Layout';
-import useI18n from '~/i18n';
+import Layout from '~/components/Layout.js';
+import useI18n from '~/i18n/index.js';
 
 const NotFoundPage = () => {
   const { addLocalePrefix, t } = useI18n();

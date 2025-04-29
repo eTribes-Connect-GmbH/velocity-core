@@ -1,7 +1,7 @@
 import fastifyBasicAuth from '@fastify/basic-auth';
 import { FastifyPluginAsync } from 'fastify';
 import fp from 'fastify-plugin';
-import config from '~/config';
+import config from '~/config.js';
 
 const basicAuth: FastifyPluginAsync = fp(async server => {
   await server.register(fastifyBasicAuth, {

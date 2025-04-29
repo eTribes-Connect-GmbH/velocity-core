@@ -2,7 +2,7 @@ import esbuild from 'esbuild';
 import { fork, spawn } from 'node:child_process';
 import { existsSync, rmSync, watch } from 'node:fs';
 import { readdir } from 'node:fs/promises';
-import path from 'path';
+import path from 'node:path';
 
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'production';
@@ -20,7 +20,7 @@ const commonOptions = {
   treeShaking: true,
   bundle: true,
   define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   },
   loader: {
     '.html': 'text',
@@ -96,17 +96,16 @@ const waitForFile = async filePath => {
   }
 };
 
-// We want to avoid bundling an outdated tailwind build, so we're rebuilding it
-if (isProduction) {
-  rmSync('src/assets/tailwind.css', { recursive: true, force: true });
-}
-
-const tailwindPath = `${buildDir}/assets/tailwind.css`;
-runService('./node_modules/.bin/tailwind', `${isDevelopment ? '-w' : '-m'} -o ${tailwindPath}`, 'ignore');
-
 if (isProduction) {
   rmSync(buildDir, { recursive: true, force: true });
 }
+
+const tailwindPath = `${buildDir}/assets/style.css`;
+runService(
+  './node_modules/.bin/tailwindcss',
+  `${isDevelopment ? '-w' : '-m'} -i ./src/assets/style.css -o ${tailwindPath}`,
+  'ignore'
+);
 
 await waitForFile(tailwindPath);
 
@@ -145,8 +144,7 @@ if (isDevelopment) {
   });
   console.log('Dev server listening on http://localhost:8888');
 
-  // The TypeScript transpilation is done by esbuild but we still want to have
-  // to check the types
+  // The TypeScript transpilation is done by esbuild but we still want to check the types
   runService('./node_modules/.bin/tsc', '--noEmit --watch -p tsconfig.json --preserveWatchOutput --pretty');
   watch('./src', { recursive: true }, async (event, filename) => {
     if (event === 'rename' && filename.endsWith('.entry.ts')) {
