@@ -2,8 +2,8 @@ import { IntlShape, createIntl } from '@formatjs/intl';
 import { FastifyRequest } from 'fastify';
 import { flatten } from 'flat';
 import { useRequest } from '~/context.js';
-import de from './de.json' assert { type: 'json' };
-import en from './en.json' assert { type: 'json' };
+import de from './de.json' with { type: 'json' };
+import en from './en.json' with { type: 'json' };
 import { defaultRichTextElements, getRichTextElementRenderer } from './richTextElements.js';
 
 export const availableLocales = ['en', 'de'] as const;

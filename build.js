@@ -19,9 +19,7 @@ const commonOptions = {
   format: 'esm',
   treeShaking: true,
   bundle: true,
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-  },
+  define: { 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) },
   loader: {
     '.html': 'text',
     '.svg': 'file',
@@ -40,8 +38,8 @@ const commonOptions = {
 const bundleMapping = {
   name: 'path-mapping',
   setup(build) {
-    build.onResolve({ filter: /^bundle:/u }, args => ({
-      path: path.resolve(`${buildDir}/assets/${args.path.replace(/^bundle:/u, '')}`)
+    build.onResolve({ filter: /^bundle:/ }, args => ({
+      path: path.resolve(`${buildDir}/assets/${args.path.replace(/^bundle:/, '')}`)
     }));
   }
 };
