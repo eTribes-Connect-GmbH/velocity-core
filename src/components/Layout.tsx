@@ -32,7 +32,9 @@ const Layout = async ({ title, customLocaleAlternates, additionalScripts, childr
           <link rel="alternate" hrefLang={eachLocale} href={eachUrl} />
         ))}
         <script async type="module" src={client} />
-        {additionalScripts?.map(script => <script async src={script} />)}
+        {additionalScripts?.map(script => (
+          <script async src={script} />
+        ))}
       </head>
       <body class="min-h-screen bg-linear-to-br from-white to-blue-200">
         <div class="m-auto max-w-(--breakpoint-lg) p-6 sm:p-10">

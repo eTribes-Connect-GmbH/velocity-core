@@ -1,5 +1,5 @@
 import eslintJsPlugin from '@eslint/js';
-import eslintJsxPlugin from '@stylistic/eslint-plugin-jsx';
+import eslintJsxPlugin from '@stylistic/eslint-plugin';
 import eslintPromisePlugin from 'eslint-plugin-promise';
 import eslintTsPlugin from 'typescript-eslint';
 
@@ -13,7 +13,7 @@ export default [
   ...eslintTsPlugin.configs.recommendedTypeChecked,
   {
     languageOptions: { parserOptions: { projectService: true, tsconfigRootDir: import.meta.dirname } },
-    plugins: { promise: eslintPromisePlugin, '@stylistic/jsx': eslintJsxPlugin },
+    plugins: { promise: eslintPromisePlugin, '@stylistic': eslintJsxPlugin },
     rules: {
       'no-empty': ['warn', { allowEmptyCatch: true }],
       '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
@@ -68,8 +68,8 @@ export default [
       '@typescript-eslint/prefer-reduce-type-parameter': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
       '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
-      '@stylistic/jsx/jsx-curly-brace-presence': ['error', 'never'],
-      '@stylistic/jsx/jsx-self-closing-comp': ['error', { component: true, html: true }],
+      '@stylistic/jsx-curly-brace-presence': ['error', 'never'],
+      '@stylistic/jsx-self-closing-comp': ['error', { component: true, html: true }],
       'no-restricted-syntax': [
         'error',
         'TSEnumDeclaration',
